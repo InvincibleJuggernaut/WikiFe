@@ -7,7 +7,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 <p align="center">
-  <img src = "Assets/WikiFe - Home.png" width="98%">
+  <img src = "Assets/WikiFe - Home.png">
   </p>
   
 <br>  
