@@ -16,7 +16,9 @@
 <p> <a href="https://www.wikipedia.org/">Wikipedia</a> is an online repository which has some sort of information on almost every topic. This Flask app uses Wikipedia API to get a search query from the user and displays a list of the related topics. Once a topic is selected, the app then fetches the summary of that Wikipedia article and displays it.
 The app also shows the most viewed Wikipedia topics in the past day along with the page views. These are hosted under the tab <b>Trending</b> on the navigation bar at the top.
   
-
+<h2>Working</h2>
+<p> The application makes use of Wikipedia API to get the required results. Once the user enters a specific word for search, the application returns a list of the most relevant topics related to the search item. The user can then click on any topic he is interested in and is lead to a summary of that topic.</p>
+<p> The user can also check the Trending page to check the most viewed Wikipedia pages along with the page views around the globe in the last day. This gives an indication of the recent happenings around the world. If interested in a  specific trending topic, the user can click on the topic and it will lead the user to the respective Wikipedia page.</p>
 
 
 
