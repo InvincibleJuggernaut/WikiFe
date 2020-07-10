@@ -26,7 +26,15 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
 <h2>Demo</h2>
 <p> The application is live at <a href="https://wikife.herokuapp.com/" target="_blank">WikiFe</a>.</p>
 
-<h2>Technologies</h2>
+<h2>Major Technologies</h2>
+<ul type="disc">
+  <li>beautifulsoup4 - 4.9.1</li>
+  <li>Flask - 1.1.2</li>
+  <li>wikipedia - 1.4.0</li>
+  <li>urllib3 - 1.25.9</li>
+  <li>Jinja2 - 2.11.2</li>
+  <li>requests - 2.24.0</li>
+</ul>
 
 <h2>Working</h2>
 <p> The application makes use of Wikipedia API to get the required results. Once the user enters a specific word for search, the application returns a list of the most relevant topics related to the search item. The user can then click on any topic according to their interest and is lead to a summary of that topic.</p>
