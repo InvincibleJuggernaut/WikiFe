@@ -35,6 +35,7 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
   <li>Jinja2 - 2.11.2</li>
   <li>requests - 2.24.0</li>
 </ul>
+<p> A complete list of all the dependencies can be found <a href="requirements.txt"> here</a>.</p>
 
 <h2>Working</h2>
 <p> The application makes use of Wikipedia API to get the required results. Once the user enters a specific word for search, the application returns a list of the most relevant topics related to the search item. The user can then click on any topic according to their interest and is lead to a summary of that topic.</p>
