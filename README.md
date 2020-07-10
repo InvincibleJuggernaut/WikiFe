@@ -2,10 +2,17 @@
   WikiFe
   </h1>
 
-[![](https://img.shields.io/badge/MADE%20WITH%20-Python-blueviolet)](https://www.python.org)
-[![License: GPL v3](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
-[![](https://img.shields.io/badge/Website-Up-success)](https://wikife.herokuapp.com/)
-
+<p align="center">
+  <a href="https://www.python.org">
+    <img src="https://img.shields.io/badge/MADE%20WITH%20-Python-blueviolet" height="20">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" height="20">
+  </a>
+  <a href="https://wikife.herokuapp.com/">
+    <img src="https://img.shields.io/badge/Website-Up-success" height="20">
+  </a>
+</p>
 
 <p align="center">
   <img src = "Assets/WikiFe - Home.png">
