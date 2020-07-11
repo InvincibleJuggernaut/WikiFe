@@ -42,10 +42,6 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
 <p> The user can also check the <b>Trending</b> page to check the most viewed Wikipedia pages along with the page views all around the globe in the last day. This gives an indication of the recent happenings around the world. If interested in a specific trending topic, the user can click on the topic and it will lead the user to the respective Wikipedia page.</p>
 
 <p align="center">
-  <img src = "Assets/WikiFe - Home.png">
-</p>
-<br>
-<p align="center">
   <img src="Assets/WikiFe - Trending.png">
 </p>
   
