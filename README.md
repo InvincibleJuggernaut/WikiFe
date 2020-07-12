@@ -39,7 +39,7 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
 
 <h2>Working</h2>
 <p> The application makes use of Wikipedia API to get the required results. Once the user enters a specific word for search, the application returns a list of the most relevant topics related to the search item. The user can then click on any topic according to their interest and is lead to a summary of that topic.</p>
-<p> The user can also check the <b>Trending</b> page to check the most viewed Wikipedia pages along with the page views all around the globe in the last day. This gives an indication of the recent happenings around the world. If interested in a specific trending topic, the user can click on the topic and it will lead the user to the respective Wikipedia page.</p>
+<p> The user can also check the <b>Trending</b> page to check the 20 most viewed Wikipedia pages along with their page views all around the globe in the last day. This gives an indication of the recent happenings around the world. If interested in a specific trending topic, the user can click on the topic and it will lead the user to the respective Wikipedia page.</p>
 
 <p align="center">
   <img src="Assets/WikiFe - Trending.png">
