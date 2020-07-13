@@ -45,7 +45,11 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
   <img src="Assets/WikiFe - Trending.png">
 </p>
   
-
+<h2>Future Improvements</h2>
+<ul type="disc">
+  <li>Monthly trends</li>
+  <li>Option to check the trend for a particular day in the past</li>
+</ul>
 
 
 <h2>License</h2>
