@@ -46,10 +46,10 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
 </p>
   
 <h2>Future Improvements</h2>
-<ul type="disc">
-  <li>Monthly trends</li>
-  <li>Option to check the trend for a particular day in the past</li>
-</ul>
+
+- [ ] Monthly trends 
+- [ ] Option to check the trend for a particular day in the past 
+
 
 
 <h2>License</h2>
