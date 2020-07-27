@@ -147,6 +147,21 @@ li a:hover{
     display: inline-block;
 }
 #error_disp{
-    font-family: Hlevetica;
+    font-family: Helvetica;
     padding: 30px 25px;
+}
+#date_entry{
+    margin: 0 auto;
+    display:block;
+    width: 100%;
+    height: 23px;
+    border-style:solid;
+    border-color: #000066;
+    border-size:1px;
+}
+#date_div{ 
+    margin: 0 auto;
+    display: block;
+    width:15%;
+    padding: 10px 0px;
 }
