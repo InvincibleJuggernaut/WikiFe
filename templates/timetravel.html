@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="info_title">Time Travel</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/template.css') }}">
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h2  class="info_heading" align="center">Results for the day </h2>
+    <div id="date_div">
+    <form method="POST">
+        <input id="date_entry" type="date" name="dayinput" placeholder=" Select a day">
+    </form>
+    </div>
+
+
+    {% endblock %}
+</body>
+</html>
