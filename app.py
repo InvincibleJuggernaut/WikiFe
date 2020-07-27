@@ -161,5 +161,14 @@ def trending():
 
     return render_template('trending.html', top=list_of_topics, view=list_of_views, link=list_of_links)
 
+@app.route("/timetravel.html", methods=['GET', 'POST'])
+def timetravel():
+    try:
+        day=request.form['dayinput']
+        return render_template('timetravel.html')
+    except:
+        return render_template('timetravel.html')
+    
+    
 if __name__=="__main__":
     app.run(debug=True)
