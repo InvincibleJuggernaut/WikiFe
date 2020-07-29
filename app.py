@@ -170,21 +170,27 @@ def timetravelresults():
         list_of_topics=[]
         list_of_views=[]
         list_of_links=[]
-        day_in_order=request.form['dayinput']
+        day=request.form['dayinput']
+        day_in_order=day.replace("-","/")
+        
         url = 'https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/' + day_in_order
         http=urllib3.PoolManager()
-        r=http.request('GET', url)    
-        data=json.loads(r.data.decode('utf-8'))
-        counter=0
-        for x in data['items'][0]['articles']:
-            if(x['article']!='Main_Page' and x['article']!='Special:Search' and counter<=19):
-                redirect_url = 'https://en.wikipedia.org/wiki/'+x['article']
-                x['article']=x['article'].replace("_"," ")
-                list_of_topics.append(x['article'])
-                list_of_views.append(x['views'])
-                list_of_links.append(redirect_url)
-                counter+=1
-        return render_template("timetravelresults.html", top=list_of_topics, view=list_of_views, link=list_of_links)    
+        try:
+            r=http.request('GET', url)    
+            data=json.loads(r.data.decode('utf-8'))
+            counter=0
+            for x in data['items'][0]['articles']:
+                if(x['article']!='Main_Page' and x['article']!='Special:Search' and counter<=19):
+                    redirect_url = 'https://en.wikipedia.org/wiki/'+x['article']
+                    x['article']=x['article'].replace("_"," ")
+                    list_of_topics.append(x['article'])
+                    list_of_views.append(x['views'])
+                    list_of_links.append(redirect_url)
+                    counter+=1
+            return render_template("timetravelresults.html", top=list_of_topics, view=list_of_views, link=list_of_links,
+        entered_day=day_in_order)
+        except (IndexError, KeyError, wikipedia.exceptions.DisambiguationError, wikipedia.exceptions.HTTPTimeoutError, wikipedia.exceptions.PageError, wikipedia.exceptions.RedirectError, wikipedia.exceptions.WikipediaException):
+            return render_template("exceptions.html")
  
 if __name__=="__main__":
     app.run(debug=True)
