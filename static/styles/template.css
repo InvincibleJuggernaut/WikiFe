@@ -103,7 +103,7 @@ li a:hover{
     padding-bottom: 100px;
 }
 #disclaimer_trending{
-    text-align:center;
+    text-align: center;
     font-family: Helvetica;
     font-weight: bold;
 }
@@ -157,11 +157,24 @@ li a:hover{
     height: 23px;
     border-style:solid;
     border-color: #000066;
-    border-size:1px;
+    border-size: 1px;
 }
 #date_div{ 
     margin: 0 auto;
     display: block;
-    width:15%;
     padding: 10px 0px;
+}
+#date_entry{
+    text-align: center;
+    width: 15%;
+}
+#submit_day{
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0px;
+}
+#disclaimer_timetravel{
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
 }
