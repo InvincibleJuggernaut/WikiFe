@@ -49,8 +49,8 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
   
 <h2>Future Improvements</h2>
 
-- [ ] Monthly trends 
-- [ ] Option to check the most popular searches for a particular day in the past 
+- [ ] Monthly trends. 
+- [x] Option to check the most popular searches for a particular day in the past.
 
 
 
