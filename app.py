@@ -192,5 +192,32 @@ def timetravelresults():
         except (IndexError, KeyError, wikipedia.exceptions.DisambiguationError, wikipedia.exceptions.HTTPTimeoutError, wikipedia.exceptions.PageError, wikipedia.exceptions.RedirectError, wikipedia.exceptions.WikipediaException):
             return render_template("exceptions.html")
  
+@app.route('/recent')
+def recent():
+    recent={}
+    for i in range(1,8):
+        day = date.today()-timedelta(days=i)
+        day_ordered=day.strftime("%Y/%m/%d")
+        list_of_days.append(day_ordered)
+    for j in range(0,7):
+        url = 'https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/' + list_of_days[j]
+        http = urllib3.PoolManager()
+        r = http.request('GET', url)
+        data = json.loads(r.data.decode('utf-8'))
+        check = 0
+        for x in data['items'][0]['articles']:
+            if (x['article'] != 'Main_Page' and x['article'] != 'Special:Search' and check <= 19):
+                redirect_url = 'https://en.wikipedia.org/wiki/' + x['article']
+                x['article'] = x['article'].replace("_", " ")
+                if(x['article'] not in recent):
+                    recent.update({x['article']:x['views']})
+                else:
+                    past_count=recent[x['article']]
+                    past_count+=int(x['views'])
+                    recent.update({x['article']:past_count})
+    sorted_recent=sorted(recent.items(), key=lambda x: x[1], reverse=True)
+    return render_template('recent.html') #list_of_days=sorted_recent)
+
+
 if __name__=="__main__":
     app.run(debug=True)
