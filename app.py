@@ -4,6 +4,7 @@ import urllib3
 import json
 import wikipedia
 import matplotlib.pyplot as plt
+import os
 
 app= Flask(__name__)
 
@@ -197,8 +198,7 @@ def timetravelresults():
 def recent():
     recent={}
     list_of_days=[]
-    list_of_titles=[]
-    list_of_views=[]
+
     for i in range(1,8):
         day = date.today()-timedelta(days=i)
         day_ordered=day.strftime("%Y/%m/%d")
@@ -220,8 +220,31 @@ def recent():
                     past_count+=int(x['views'])
                     recent.update({x['article']:past_count})
     sorted_recent=sorted(recent.items(), key=lambda x: x[1], reverse=True)
-
-    return render_template('recent.html', list_of_topics=sorted_recent)
+    list_of_titles = []
+    list_of_views = []
+    for x in sorted_recent[0:7]:
+        list_of_titles.append(x[0])
+        list_of_views.append(x[1])
+    plt.figure(figsize=(10, 10))
+    bar = plt.bar(list_of_titles, list_of_views)
+    plt.title('Total views in the last 7 days')
+    bar[0].set_color('r')
+    bar[1].set_color('g')
+    bar[2].set_color('b')
+    bar[3].set_color('c')
+    bar[4].set_color('m')
+    bar[5].set_color('y')
+    bar[6].set_color('k')
+    plt.legend((bar[0], bar[1], bar[2], bar[3], bar[4], bar[5], bar[6]), (
+    list_of_titles[0], list_of_titles[1], list_of_titles[2], list_of_titles[3], list_of_titles[4], list_of_titles[5],
+    list_of_titles[6]), loc="upper left", bbox_to_anchor=(1, 1))
+    plt.ylabel('Total views')
+    plt.xticks(rotation=90)
+    plt.xlabel('Topics')
+    location=os.path.join('static/plots','plot')
+    plt.savefig(location+'plot.jpg', bbox_inches='tight')
+    location_final='/'+location+'plot.jpg'
+    return render_template('recent.html', list_of_topics=sorted_recent, location=location_final)
 
 
 if __name__=="__main__":
