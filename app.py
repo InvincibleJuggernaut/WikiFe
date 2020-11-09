@@ -225,6 +225,7 @@ def recent():
     for x in sorted_recent[0:7]:
         list_of_titles.append(x[0])
         list_of_views.append(x[1])
+    '''    
     plt.figure(figsize=(10, 10))
     bar = plt.bar(list_of_titles, list_of_views)
     plt.title('Total views in the last 7 days')
@@ -242,9 +243,13 @@ def recent():
     plt.xticks(rotation=90)
     plt.xlabel('Topics')
     location=os.path.join('static/plots','plot')
-    plt.savefig(location+'plot.jpg', bbox_inches='tight')
+    print(type(bar))
+    #plt.savefig(location+'plot.jpg', bbox_inches='tight')
     location_final='/'+location+'plot.jpg'
-    return render_template('recent.html', list_of_topics=sorted_recent, location=location_final)
+    '''
+    print(sorted_recent[18])
+    print(sorted_recent[19])
+    return render_template('recent.html', list_of_topics=sorted_recent) #location=location_final
 
 
 if __name__=="__main__":
