@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recent</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/template.css') }}">
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1 id="trending_heading">Talking points from the last week</h1>
+
+    <p align="center"><img src={{ location }}></p>
+    <table class="trending_table">
+        <tr>
+            <th>Rank</th>
+            <th>Pages</th>
+            <th>Page views</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>{{ list_of_topics[0][0] }}</td>
+            <td>{{ list_of_topics[0][1] }}</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>{{ list_of_topics[1][0] }}</td>
+            <td>{{ list_of_topics[1][1] }}</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>{{ list_of_topics[2][0] }}</td>
+            <td>{{ list_of_topics[2][1] }}</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>{{ list_of_topics[3][0] }}</td>
+            <td>{{ list_of_topics[3][1] }}</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>{{ list_of_topics[4][0] }}</td>
+            <td>{{ list_of_topics[4][1] }}</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>{{ list_of_topics[5][0] }}</td>
+            <td>{{ list_of_topics[5][1] }}/td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>{{ list_of_topics[6][0] }}</td>
+            <td>{{ list_of_topics[6][1] }}</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>{{ list_of_topics[7][0] }}</td>
+            <td>{{ list_of_topics[7][1] }}</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>{{ list_of_topics[8][0] }}</td>
+            <td>{{ list_of_topics[8][1] }}</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>{{ list_of_topics[9][0] }}</td>
+            <td>{{ list_of_topics[9][1] }}</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>{{ list_of_topics[10][0] }}</td>
+            <td>{{ list_of_topics[10][1] }}</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>{{ list_of_topics[11][0] }}</td>
+            <td>{{ list_of_topics[11][1] }}</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>{{ list_of_topics[12][0] }}</td>
+            <td>{{ list_of_topics[12][1] }}</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>{{ list_of_topics[13][0] }}</td>
+            <td>{{ list_of_topics[13][1] }}</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>{{ list_of_topics[14][0] }}</td>
+            <td>{{ list_of_topics[14][1] }}</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>{{ list_of_topics[15][0] }}</td>
+            <td>{{ list_of_topics[15][1] }}</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>{{ list_of_topics[16][0] }}</td>
+            <td>{{ list_of_topics[16][1] }}</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>{{ list_of_topics[17][0] }}</td>
+            <td>{{ list_of_topics[17][1] }}</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td><{{ list_of_topics[18][0] }}</td>
+            <td>{{ list_of_topics[18][1] }}</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>{{ list_of_topics[19][0] }}</td>
+            <td>{{ list_of_topics[19][1] }}</td>
+        </tr>
+    </table>
+
+
+    {% endblock %}
+
+</body>
+</html>
