@@ -3,6 +3,7 @@ from datetime import date, timedelta
 import urllib3
 import json
 import wikipedia
+import matplotlib.pyplot as plt
 
 app= Flask(__name__)
 
@@ -195,6 +196,9 @@ def timetravelresults():
 @app.route('/recent')
 def recent():
     recent={}
+    list_of_days=[]
+    list_of_titles=[]
+    list_of_views=[]
     for i in range(1,8):
         day = date.today()-timedelta(days=i)
         day_ordered=day.strftime("%Y/%m/%d")
@@ -216,7 +220,8 @@ def recent():
                     past_count+=int(x['views'])
                     recent.update({x['article']:past_count})
     sorted_recent=sorted(recent.items(), key=lambda x: x[1], reverse=True)
-    return render_template('recent.html') #list_of_days=sorted_recent)
+
+    return render_template('recent.html', list_of_topics=sorted_recent)
 
 
 if __name__=="__main__":
