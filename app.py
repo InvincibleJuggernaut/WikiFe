@@ -243,8 +243,9 @@ def recent():
     list_of_titles[0], list_of_titles[1], list_of_titles[2], list_of_titles[3], list_of_titles[4], list_of_titles[5],
     list_of_titles[6]), loc="upper left", bbox_to_anchor=(1, 1))
     plt.ylabel('Total views (in million)')
-    plt.xticks(rotation=90)
     plt.xlabel('Topics')
+    ax=plt.gca()
+    ax.axes.xaxis.set_ticks([])
     buf=io.BytesIO()
     plt.savefig(buf, bbox_inches='tight')
     buf.seek(0)

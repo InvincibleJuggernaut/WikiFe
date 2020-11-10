@@ -178,3 +178,6 @@ li a:hover{
     font-family: Helvetica;
     font-weight: bold;
 }
+#about_tab{
+    float:right;
+}
