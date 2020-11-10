@@ -10,8 +10,8 @@
     {% extends "template.html" %}
     {% block content %}
     <h1 id="trending_heading">Recent talking points</h1>
-
-    <p align="center"><img src={{ location }}></p>
+    <br>
+    <p align="center"><img src="data:image/png;base64,{{img|safe}}"></p>
     <table class="trending_table">
         <tr>
             <th>Rank</th>
@@ -46,7 +46,7 @@
         <tr>
             <td>6</td>
             <td>{{ list_of_topics[5][0] }}</td>
-            <td>{{ list_of_topics[5][1] }}/td>
+            <td>{{ list_of_topics[5][1] }}</td>
         </tr>
         <tr>
             <td>7</td>

@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request
 from datetime import date, timedelta
+import matplotlib.pyplot as plt
+from PIL import Image
 import urllib3
 import json
 import wikipedia
-import matplotlib.pyplot as plt
-import os
+import os, io
+from io import StringIO
+import base64
 
 app= Flask(__name__)
 
@@ -193,7 +196,7 @@ def timetravelresults():
         entered_day=day_in_order)
         except (IndexError, KeyError, wikipedia.exceptions.DisambiguationError, wikipedia.exceptions.HTTPTimeoutError, wikipedia.exceptions.PageError, wikipedia.exceptions.RedirectError, wikipedia.exceptions.WikipediaException):
             return render_template("exceptions.html")
- 
+
 @app.route('/recent')
 def recent():
     recent={}
@@ -225,7 +228,7 @@ def recent():
     for x in sorted_recent[0:7]:
         list_of_titles.append(x[0])
         list_of_views.append(x[1])
-    '''    
+
     plt.figure(figsize=(10, 10))
     bar = plt.bar(list_of_titles, list_of_views)
     plt.title('Total views in the last 7 days')
@@ -239,17 +242,18 @@ def recent():
     plt.legend((bar[0], bar[1], bar[2], bar[3], bar[4], bar[5], bar[6]), (
     list_of_titles[0], list_of_titles[1], list_of_titles[2], list_of_titles[3], list_of_titles[4], list_of_titles[5],
     list_of_titles[6]), loc="upper left", bbox_to_anchor=(1, 1))
-    plt.ylabel('Total views')
+    plt.ylabel('Total views (in million)')
     plt.xticks(rotation=90)
     plt.xlabel('Topics')
-    location=os.path.join('static/plots','plot')
-    print(type(bar))
-    #plt.savefig(location+'plot.jpg', bbox_inches='tight')
-    location_final='/'+location+'plot.jpg'
-    '''
-    print(sorted_recent[18])
-    print(sorted_recent[19])
-    return render_template('recent.html', list_of_topics=sorted_recent) #location=location_final
+    buf=io.BytesIO()
+    plt.savefig(buf, bbox_inches='tight')
+    buf.seek(0)
+    image33=Image.open(buf)
+    img_io=io.BytesIO()
+    image33.save(img_io,'png')
+    img_io.seek(0)
+    img = base64.b64encode(img_io.getvalue())
+    return render_template('recent.html', list_of_topics=sorted_recent, img=img.decode('ascii'))
 
 
 if __name__=="__main__":
