@@ -49,7 +49,7 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
   
 <h2>Future Improvements</h2>
 
-- [x] <del>Monthly trends</del> Showing monthly trends proved to be slower, therefore reverted to weekly trends. 
+- [x] <del>Monthly trends</del> Showing monthly trends proved to be slower as well as a congested graph, therefore reverted to weekly trends.  
 - [x] Option to check the most popular searches for a particular day in the past.
 
 
