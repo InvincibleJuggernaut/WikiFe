@@ -241,7 +241,7 @@ def recent():
     bar[6].set_color('k')
     plt.legend((bar[0], bar[1], bar[2], bar[3], bar[4], bar[5], bar[6]), (
     list_of_titles[0], list_of_titles[1], list_of_titles[2], list_of_titles[3], list_of_titles[4], list_of_titles[5],
-    list_of_titles[6]), loc="upper left", bbox_to_anchor=(1, 1))
+    list_of_titles[6]), loc="upper right")
     plt.ylabel('Total views (in million)')
     plt.xlabel('Topics')
     ax=plt.gca()
