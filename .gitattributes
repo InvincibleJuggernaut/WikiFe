@@ -15,4 +15,6 @@ templates/info13* linguist-vendored
 templates/info14* linguist-vendored
 templates/info15* linguist-vendored
 templates/template* linguist-vendored
+templates/results* linguist-vendored
 templates/timetravelresults* linguist-vendored
+templates/trending* linguist-vendored
