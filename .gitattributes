@@ -1,2 +1,16 @@
-*.html linguist-detectable=false
-
+templates/info0* linguist-vendored
+templates/info1* linguist-vendored
+templates/info2* linguist-vendored
+templates/info3* linguist-vendored
+templates/info4* linguist-vendored
+templates/info5* linguist-vendored
+templates/info6* linguist-vendored
+templates/info7* linguist-vendored
+templates/info8* linguist-vendored
+templates/info9* linguist-vendored
+templates/info10* linguist-vendored
+templates/info11* linguist-vendored
+templates/inf12* linguist-vendored
+templates/info13* linguist-vendored
+templates/info14* linguist-vendored
+templates/info15* linguist-vendored
