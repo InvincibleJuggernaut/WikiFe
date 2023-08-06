@@ -9,7 +9,7 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" height="20">
   </a>
-  <a href="https://wikife.herokuapp.com/">
+  <a href="https://wikife.vercel.app/">
     <img src="https://img.shields.io/badge/Website-Up-success" height="20">
   </a>
 </p>
