@@ -25,7 +25,7 @@ The app also shows the most viewed Wikipedia topics in the past day along with t
 <p> The <b>Time Travel</b> tab caters to any queries regarding any day from the past. Users can choose any particular day and the top most results from that day will be displayed. </p>
 
 <h2>Demo</h2>
-<p> The application is live at <a href="https://wikife.herokuapp.com/" target="_blank">WikiFe</a>.</p>
+<p> The application is live at <a href="https://wikife.vercel.app/" target="_blank">WikiFe</a>.</p>
 
 <h2>Major Technologies</h2>
 <ul type="disc">
